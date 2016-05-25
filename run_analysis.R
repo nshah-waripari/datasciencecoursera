@@ -41,7 +41,7 @@ activities <- function(y_train_data, y_test_data){
         activityNames <-
                 c("Walking", "Walking Upstairs", "Walking Downstairs", "Sitting", "Standing", "Laying")
         # transform activities id  to description
-        activities <- activityNames[yMerged]
+        activities <- activityNames[y_merged]
 }
 
 subjects <- function(subject_train_data, subject_test_data){
