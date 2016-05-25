@@ -1,5 +1,4 @@
-# Getting and Cleaning Data Course Project
-## Cleaned up data from Human Activity Recognition Using Smartphones Data Set
+## Prepare tidy data from Human Activity Recognition Using Smartphones Data Set
 - Description of dataset is available at http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 - Raw dataset was taken from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
