@@ -55,11 +55,11 @@ subjects <- function(subject_train_data, subject_test_data){
 # main function to return tidy data
 tidy <- function(){
         # cleaned-up measurement data
-        merged_data <- mergeAndLabel("./UCI HAR Dataset/train/X_train.txt", "./UCI HAR Dataset/test/X_test.txt", "./UCI HAR Dataset/features.txt")
+        merged_data <- mergeAndLabel("./train/X_train.txt", "./test/X_test.txt", "./features.txt")
         # activities data
-        activities_data <- activities("./UCI HAR Dataset/train/y_train.txt", "./UCI HAR Dataset/test/y_test.txt")
+        activities_data <- activities("./train/y_train.txt", "./test/y_test.txt")
         # subject data
-        subjects_data <- subjects("./UCI HAR Dataset/train/subject_train.txt", "./UCI HAR Dataset/test/subject_test.txt")
+        subjects_data <- subjects("./train/subject_train.txt", "./test/subject_test.txt")
         # combine them together for our final tidy data
         tidy <- cbind(Subject = subjects_data, Activity = activities_data, merged_data)
         
@@ -72,7 +72,7 @@ tidy_mean <- function(){
         tidy_means <- tidy() %>% group_by(Subject, Activity) %>% summarise_each(funs(mean))
         names(tidy_means)[-c(1,2)] <- paste0("Mean", names(tidy_means)[-c(1,2)])
         # write to a file
-        write.table(tidy_means, "tidy_means.txt", row.names = FALSE)
+        write.table(tidy_means, "tidy_means.txt", row.name = FALSE)
         tidy_means
         
 }
