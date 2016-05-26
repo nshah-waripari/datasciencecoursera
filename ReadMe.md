@@ -8,4 +8,13 @@ The goal of the script "run_Analysis.R" is to prepare tidy data the can be used 
 - The variables or columns of the merged data set is further transformed into more human readable form.
 - Finally the variable is further summarized by taking mean for each activity/subject pair.
 
+The script is divided into six function definitions:
+- readData : A generic function to read raw files.
+- mergeAndLabel : Merges test and train raw measurment data files, extract only the measurements on the mean and standard deviation for each measurement and appropriately label each column with descriptive names.
+- activities : Label activities id with descriptive names.
+- subjects : Simply read subjects files.
+- tidy : Merges tidied up measurment, activities and subjects data.
+- tidy_mean : Returns tidy data set with the average of each variable for each activity and each subject.
+
+
 The final data can be found in the "tidy_means.txt". A detailed description of variables can be found in "CodeBook.md".
